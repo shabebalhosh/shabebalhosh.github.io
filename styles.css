@@ -3,6 +3,7 @@
 * {
     font-family: 'Katibeh', cursive; 
     text-shadow: 3px 3px 6px #143D43;
+    user-select: none;
 }
 
 body {
@@ -53,7 +54,7 @@ hr {
 }
 
 .main {
-    background-image: linear-gradient(#143D43, #14A093);
+    background-image: linear-gradient(#143D43, #14A093, #14A093, #14A093, #14A093);
     padding: 40px;
     border-radius: 20% 9%;
     color: white;
@@ -92,6 +93,11 @@ hr {
     background-color: white;
     color: #143D43;
     box-shadow: 2px 2px 6px #143D43;
+}
+
+.nameInput input:focus,
+.nameInput input:valid {
+  border-color: none;
 }
 
 .phone {
