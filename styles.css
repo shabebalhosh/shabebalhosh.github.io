@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap');
+
+* {
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 100px;
+}
+
+img {
+    padding-right: 2%;
+    max-width: 30%;
+    max-height: 30%;
+    float: right;
+    position: fixed;
+    right: 0px;
+    top: 30px;
+}
+
+.main {
+    background-color: #143D43;
+    padding: 25px;
+    border-radius: 25px;
+    color: white;
+    
+}
+
