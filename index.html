@@ -9,9 +9,42 @@
 </head>
 <body>
     <div class="main">
+            <div class="head">
+                <h1 class="title">تجمع شباب الحوش | منصة التبرع</h1>
+                <img src="media/logo.png" alt="">
+                
+                <hr>
+            </div>
 
-            <h1 class="title">تجمع شباب الحوش | منصة التبرع</h1>
-            <img src="media/logo.png" alt="">
+            <br><br>
+
+            <div class="onForm">
+                <form action="https://formspree.io/f/xjvdvgly" method="post">
+                    <div class="name">
+                        <span class="nameSpan">الاسم الكريم</span>
+                        <input name="الاسم الكريم" type="text" class="nameInput">
+                    </div>
+                    <div class="phone">
+                        <span class="phoneSpan">رقم الهاتف</span>
+                        <input name="رقم الهاتف" type="tele" class="phoneInput">
+                    </div>
+                    <div class="typeOfContribution">
+                        <span class="typeOfContributionSpan">نوع التبرع</span>
+                        <select name="نوع التبرع" class="typeOfContributionInput">
+                            <option value="" disabled selected>بما ستتبرع ؟</option>
+                            <option value="كتب">كتب</option>
+                            <option value="ثياب">ثياب</option>
+                            <option value="بلاستيك">بلاستيك</option>
+                            <option value="زيت مستعمل">زيت مستعمل</option>
+                            <option value="تبرع مادي">تبرع مادي</option>
+                        </select>
+                    </div>
+                    <br><br><br><br><br><br><br><br><br><br><br>
+                    <div class="submit">
+                        <input type="submit" value="رفع الاستمارة">
+                    </div>
+                </form>
+            </div>
 
     </div>
     <script src="index.js"></script>
