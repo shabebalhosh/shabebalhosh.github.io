@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="1024" >
+    <meta name="viewport" content="width=1024" >
     <title>منصة تجمع شباب الحوش للتبرعات</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -20,18 +20,18 @@
             <br><br>
 
             <div class="onForm">
-                <form action="https://formspree.io/f/xjvdvgly" method="post">
+                <form action="" method="post" id="contactForm">
                     <div class="name">
                         <span class="nameSpan">الاسم الكريم</span>
-                        <input required name="الاسم الكريم" type="text" class="nameInput">
+                        <input required id="name" type="text" class="nameInput">
                     </div>
                     <div class="phone">
                         <span class="phoneSpan">رقم الهاتف</span>
-                        <input required name="رقم الهاتف" type="tele" class="phoneInput">
+                        <input required id="phonenb" type="" class="phoneInput">
                     </div>
                     <div class="typeOfContribution">
                         <span class="typeOfContributionSpan">نوع التبرع</span>
-                        <select required name="نوع التبرع" class="typeOfContributionInput">
+                        <select required id="donationType" class="typeOfContributionInput">
                             <option value="" disabled selected> </option>
                             <option value="كتب">كتب</option>
                             <option value="ثياب">ثياب</option>
@@ -48,6 +48,32 @@
             </div>
 
     </div>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+        const firebaseConfig = {
+          apiKey: "AIzaSyBSOB0zMXgqb9XOzrWckFvh_OjuhkiTT5M",
+          authDomain: "contributionanddonationform.firebaseapp.com",
+          databaseURL: "https://contributionanddonationform-default-rtdb.firebaseio.com",
+          projectId: "contributionanddonationform",
+          storageBucket: "contributionanddonationform.appspot.com",
+          messagingSenderId: "965432599487",
+          appId: "1:965432599487:web:41c5c59bd1e5dc608f770a"
+        };
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            set(ref(db, 'users/' + Math.random().toString(36).slice(2, 7)), {
+                name: document.getElementById('name').value,
+                phoneNB: document.getElementById('phonenb').value,
+                donationType: document.getElementById('donationType').value
+            });
+
+            alert('Your form is submitted');
+            document.getElementById('frmContact').reset();
+        });
+    </script>
     <script src="index.js"></script>
 </body>
 </html>
