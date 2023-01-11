@@ -13,25 +13,23 @@
               <img src="media/logo.png" alt=""> 
                 <h1 class="title">تجمع شباب الحوش</h1>
                 <h1 class="subtitle">استمارة التّبرّع</h1>
-                
-                <hr>
             </div>
 
-            <br><br>
+            <br><br><br><br>
 
             <div class="onForm">
                 <form action="" method="post" id="contactForm">
                     <div class="name">
                         <span class="nameSpan">الاسم الكريم</span>
-                        <input required id="name" type="text" class="nameInput">
+                        <input required id="name" type="text" class="Input">
                     </div>
                     <div class="phone">
                         <span class="phoneSpan">رقم الهاتف</span>
-                        <input required id="phonenb" type="" class="phoneInput">
+                        <input required id="phonenb" type="" class="Input">
                     </div>
                     <div class="typeOfContribution">
                         <span class="typeOfContributionSpan">نوع التبرع</span>
-                        <select required id="donationType" class="typeOfContributionInput">
+                        <select required id="donationType" class="selInput">
                             <option value="" disabled selected> </option>
                             <option value="كتب">كتب</option>
                             <option value="ثياب">ثياب</option>
@@ -40,10 +38,11 @@
                             <option value="تبرع مادي">تبرع مادي</option>
                         </select>
                     </div>
-                    <br><br><br><br><br><br><br><br><br><br><br>
+                    <br><br><br><br><br>
                     <div class="submit">
-                        <input type="submit" value="رفع الاستمارة">
+                        <input type="submit" value="ارسال المعلومات">
                     </div>
+                    <br><br><br><br>
                 </form>
             </div>
 
@@ -70,7 +69,7 @@
                 donationType: document.getElementById('donationType').value
             });
 
-            alert('Your form is submitted');
+            alert('');
             document.getElementById('frmContact').reset();
         });
     </script>
