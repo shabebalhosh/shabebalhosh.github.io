@@ -205,17 +205,16 @@ span {
 
 h2:before {
   content: attr(data-text);
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 0;
   height: 100%;
   color: #14A093;
   --webkit-text-stroke: 0.3vw #202225;
   border-right: 2px solid #14A093;
   overflow: hidden;
-  animation: animate 6s linear infinite;
-  
+  animation: animate 5s linear infinite;
 }
 
 @keyframes animate {
