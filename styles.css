@@ -63,7 +63,7 @@ hr {
     padding: 40px;
     border-radius: 20% 9%;
     color: white;
-    box-shadow: 0 0 50px 10px#143D43;
+    box-shadow: 0 0 50px 10px #143D43;
     width: 100%;
     
 }
@@ -169,4 +169,60 @@ hr {
   background-color: #143D43;
   transition: all 0.3s ease 0s;
   transform: scale(1.050);
+}
+
+.splash {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #202225;
+  z-index: 1;
+}
+
+.splashTxt {
+  position: relative;
+ transform: translate(-0%, -50%); 
+}
+
+h2 {
+  font-size: 80px;
+  color: #202225;
+  --webkit-text-stroke: 0.3vw #14A093;
+  text-shadow: none;
+}
+
+span {
+  text-shadow: none;
+}
+
+h2:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #14A093;
+  --webkit-text-stroke: 0.3vw #202225;
+  border-right: 2px solid #14A093;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+  
+}
+
+@keyframes animate {
+  0%, 100% {
+    width: 0;
+  }
+  70%, 90% {
+    width: 100%;
+  }
 }

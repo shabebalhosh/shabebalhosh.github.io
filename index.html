@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1024" >
-    <title>منصة تجمع شباب الحوش للتبرعات</title>
+    <meta name="viewport" content="width=1024, user-scalable=0" >
+    <title>منصة تجمّع شباب الحوش للتبرّعات</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  
+  <!--<div class="splash">-->
+  <!--  <h2 data-text='تجمّع.شباب.الحوش' class="splashTxt">تجمّع.شباب.الحوش</h2>-->
+  <!--</div>-->
+  
+  <div class="splash">
+    <h2 data-text='ShabebALHosh' class="splashTxt">ShabebALHosh</h2>
+  </div>
+  
     <div class="main">
             <div class="head">
               <img src="media/logo.png" alt=""> 
-                <h1 class="title">تجمع شباب الحوش</h1>
+                <h1 class="title">تجمّع شباب الحوش</h1>
                 <h1 class="subtitle">استمارة التّبرّع</h1>
             </div>
 
@@ -20,7 +29,7 @@
             <div class="onForm">
                 <form action="" method="post" id="contactForm">
                     <div class="name">
-                        <span class="nameSpan">الاسم الكريم</span>
+                        <span class="nameSpan">الإسم الكريم</span>
                         <input required id="name" type="text" class="Input">
                     </div>
                     <div class="phone">
@@ -28,19 +37,19 @@
                         <input required id="phonenb" type="" class="Input">
                     </div>
                     <div class="typeOfContribution">
-                        <span class="typeOfContributionSpan">نوع التبرع</span>
+                        <span class="typeOfContributionSpan">نوع التبرّع </span>
                         <select required id="donationType" class="selInput">
                             <option value="" disabled selected> </option>
                             <option value="كتب">كتب</option>
                             <option value="ثياب">ثياب</option>
                             <option value="بلاستيك">بلاستيك</option>
                             <option value="زيت مستعمل">زيت مستعمل</option>
-                            <option value="تبرع مادي">تبرع مادي</option>
+                            <option value="تبرّع مادي">تبرع مادي</option>
                         </select>
                     </div>
                     <br><br><br><br><br>
                     <div class="submit">
-                        <input type="submit" value="ارسال المعلومات">
+                        <input type="submit" value="إرسال المعلومات">
                     </div>
                     <br><br><br><br>
                 </form>
@@ -70,7 +79,7 @@
             });
 
             alert('');
-            document.getElementById('frmContact').reset();
+            document.getElementById('contactForm').reset();
         });
     </script>
     <script src="index.js"></script>
