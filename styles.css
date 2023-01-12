@@ -183,45 +183,53 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #202225;
+  background-color: white;
   z-index: 1;
 }
 
 .splashTxt {
-  position: relative;
- transform: translate(-0%, -50%); 
-}
-
-h2 {
-  font-size: 80px;
-  color: #202225;
-  --webkit-text-stroke: 0.3vw #14A093;
-  text-shadow: none;
+  position: absolute;
+ transform: translate(-0%, -50%);
 }
 
 span {
+  font-size: 110px;
+  color: white;
+  --webkit-text-stroke: 0 0 0.3vw #14A093;
   text-shadow: none;
 }
 
-h2:before {
+span:before {
   content: attr(data-text);
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 0;
   height: 100%;
   color: #14A093;
-  --webkit-text-stroke: 0.3vw #202225;
+  --webkit-text-stroke: 0vw #202225;
   border-right: 2px solid #14A093;
   overflow: hidden;
-  animation: animate 5s linear infinite;
+  animation: animate 3.5s linear infinite;
+  animation-iteration-count: 1;
 }
 
 @keyframes animate {
-  0%, 100% {
+  0%, 10%, 100% {
     width: 0;
   }
   70%, 90% {
-    width: 100%;
+    width: 103%;
+  }
+}
+
+.splash {
+  opacity: 1;
+  animation: fade 2s 3.5s ease-out forwards;
+}
+
+@keyframes fade {
+  to{
+    opacity: 0;
   }
 }
