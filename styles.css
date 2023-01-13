@@ -245,8 +245,8 @@ span:before {
 
 
 .social {
-  position: fixed;
-  top: 84vh;
+  position: absolute;
+  top: 86vh;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -258,13 +258,12 @@ span:before {
 .social h3 {
   color: #143D43;
   text-shadow: none;
-  font-size: 35px;
-  text-decoration: underline;
+  font-size: 26px;
 }
 
 .social a img {
   position: fixed;
-  width: 15%;
+  width: 13%;
 }
 
 .social .wa {
@@ -276,7 +275,7 @@ span:before {
 .social .insta {
   position: fixed;
   top: 170px;
-  left: 430px;
+  left: 445px;
   right: 200px;
   transform: scale(1.1);
 }
