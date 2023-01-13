@@ -73,7 +73,6 @@ hr {
     color: white;
     box-shadow: 0 0 50px 10px #143D43;
     width: 100%;
-    
 }
 
 .onForm {
@@ -193,6 +192,7 @@ hr {
   align-items: center;
   background-color: white;
   z-index: 1;
+  box-shadow: none;
 }
 
 .splashTxt {
@@ -234,6 +234,7 @@ span:before {
 .splash {
   opacity: 1;
   animation: fade 2s 3.5s ease-out forwards;
+  
 }
 
 @keyframes fade {
