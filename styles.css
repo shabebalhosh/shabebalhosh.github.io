@@ -233,3 +233,47 @@ span:before {
     opacity: 0;
   }
 }
+
+
+.social {
+  position: fixed;
+  top: 84vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 25%;
+  text-align: center;
+  display: grid;
+}
+
+.social h3 {
+  color: #143D43;
+  text-shadow: none;
+  font-size: 35px;
+  text-decoration: underline;
+}
+
+.social a img {
+  position: fixed;
+  width: 15%;
+}
+
+.social .wa {
+  position: fixed;
+  top: 170px;
+  right: 180px;
+}
+
+.social .insta {
+  position: fixed;
+  top: 170px;
+  left: 430px;
+  right: 200px;
+  transform: scale(1.1);
+}
+
+.social .fb {
+  position: fixed;
+  top: 170px;
+  left: 180px;
+}

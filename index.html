@@ -19,7 +19,7 @@
   
     <div class="main">
             <div class="head">
-              <img src="media/logo.png" alt=""> 
+              <img oncontextmenu="return false;" src="media/logo.png" alt=""> 
                 <h1 class="title">تجمّع شباب الحوش</h1>
                 <h1 class="subtitle">استمارة التّبرّع</h1>
             </div>
@@ -30,14 +30,14 @@
                 <form action="" method="post" id="contactForm">
                     <div class="name">
                         <span class="nameSpan">الإسم الكريم</span>
-                        <input placeholder="اكتب اسمك/ي باللغة العربية" required id="name" type="text" class="Input">
+                        <input placeholder="الإسم باللغة العربية" required id="name" type="text" class="Input">
                     </div>
                     <div class="phone">
                         <span class="phoneSpan">رقم الهاتف</span>
                         <input placeholder="مثلاً: 81650972" required id="phonenb" type="tel" pattern='[0-9]{11}' class="Input">
                     </div>
                     <div class="typeOfContribution">
-                        <span class="typeOfContributionSpan">بما ستتبرّع؟</span>
+                        <span class="typeOfContributionSpan">بما ستتبرّع/ين؟</span>
                         <select required id="donationType" class="selInput">
                             <option value="" disabled selected> </option>
                             <option value="كتب">كتب</option>
@@ -49,13 +49,22 @@
                     </div>
                     <br><br><br><br><br>
                     <div class="submit">
-                        <input type="submit" value="إرسال المعلومات">
+                        <input type="submit" value="أرسل/ي المعلومات">
                     </div>
                     <br><br><br><br>
                 </form>
             </div>
-
     </div>
+    
+    
+    <div class="social">
+      <h3 class="socialTitle">عندكم إستفسار أو سؤال أو بدكم تتعرفوا عالتّجمع أكتر؟ <br>تواصلوا معنا وواكبونا وين ما بدّكم</h3>
+      <a oncontextmenu="return false;" target="_blank" href="https://wa.me/+96170560518"><img class="wa" src="media/whatsapp.png" alt=""></a>
+      <a oncontextmenu="return false;" target="_blank" href="https://instagram.com/shabeb.al.hosh?igshid=NTdlMDg3MTY="><img src="media/instagram.png" alt="" class="insta"></a>
+      <a oncontextmenu="return false;" target="_blank" href="https://www.facebook.com/shabeb.al.hosh/"><img src="media/facebook.png" alt="" class="fb"></a>
+    </div>
+    
+    
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
         import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
@@ -78,7 +87,7 @@
                 donationType: document.getElementById('donationType').value
             });
 
-            alert('');
+            alert('تم إرسال معلوماتك التي أدخلتها إلى قاعدة البيانات الخاصة بتجمّع شباب الحوش. سوف يتم التّواصل معك بأقرب وقت، شكراً لوقتك');
             document.getElementById('contactForm').reset();
         });
     </script>
