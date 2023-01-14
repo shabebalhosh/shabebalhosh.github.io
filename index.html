@@ -34,7 +34,7 @@
                     </div>
                     <div class="phone">
                         <span class="phoneSpan">رقم الهاتف</span>
-                        <input placeholder="مثلاً: 81650972" required id="phonenb" type="tel" pattern='[0-9]{11}' class="Input">
+                        <input placeholder="مثلاً: 81650972" required id="phonenb" type="tel" minlength="8" class="Input">
                     </div>
                     <div class="typeOfContribution">
                         <span class="typeOfContributionSpan">بما ستتبرّع/ين؟</span>
@@ -64,7 +64,7 @@
       <a oncontextmenu="return false;" target="_blank" href="https://www.facebook.com/shabeb.al.hosh/"><img src="media/facebook.png" alt="" class="fb"></a>
     </div>
     
-    
+    <script src="index.js"></script>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
         import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
@@ -81,7 +81,7 @@
         const db = getDatabase(app);
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            set(ref(db, 'users/' + Math.random().toString(36).slice(2, 7)), {
+            set(ref(db, 'donators/' + Math.random().toString(36).slice(2, 7)), {
                 name: document.getElementById('name').value,
                 phoneNB: document.getElementById('phonenb').value,
                 donationType: document.getElementById('donationType').value
@@ -91,6 +91,5 @@
             document.getElementById('contactForm').reset();
         });
     </script>
-    <script src="index.js"></script>
 </body>
 </html>
