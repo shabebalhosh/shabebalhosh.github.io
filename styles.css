@@ -22,7 +22,6 @@ body {
     padding-top: 200px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .head {
@@ -245,7 +244,7 @@ span:before {
 
 
 .social {
-  position: absolute;
+  position: fixed;
   top: 86vh;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -253,6 +252,7 @@ span:before {
   height: 25%;
   text-align: center;
   display: grid;
+  bottom: 0;
 }
 
 .social h3 {
