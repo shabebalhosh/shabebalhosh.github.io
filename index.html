@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1024, user-scalable=0" >
+    <meta name="viewport" content="width=1000, user-scalable=no, height=1920" >
     
     <title>منصة تجمّع شباب الحوش للتبرّعات</title>
     <link rel="stylesheet" href="styles.css">
@@ -57,17 +57,19 @@
     </div>
     
     
-    <footer class="social">
+    <div class="social">
       <h3 class="socialTitle">عندكم إستفسار أو سؤال أو بدكم تتعرفوا عالتّجمّع أكتر؟ <br>تواصلوا معنا وواكبونا وين ما بدّكم</h3>
       <a oncontextmenu="return false;" target="_blank" href="https://wa.me/+96170560518"><img class="wa" src="media/whatsapp.png" alt=""></a>
       <a oncontextmenu="return false;" target="_blank" href="https://instagram.com/shabeb.al.hosh?igshid=NTdlMDg3MTY="><img src="media/instagram.png" alt="" class="insta"></a>
       <a oncontextmenu="return false;" target="_blank" href="https://www.facebook.com/shabeb.al.hosh/"><img src="media/facebook.png" alt="" class="fb"></a>
-    </footer>
+    </div>
     
     <script src="index.js"></script>
+    
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
         import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+        
         const firebaseConfig = {
           apiKey: "AIzaSyBSOB0zMXgqb9XOzrWckFvh_OjuhkiTT5M",
           authDomain: "contributionanddonationform.firebaseapp.com",
@@ -87,8 +89,8 @@
                 donationType: document.getElementById('donationType').value
             });
 
-            alert('تم إرسال معلوماتك التي أدخلتها إلى قاعدة البيانات الخاصة بتجمّع شباب الحوش. سوف يتم التّواصل معك بأقرب وقت، شكراً لوقتك');
             document.getElementById('contactForm').reset();
+            alert('تم إرسال معلوماتك التي أدخلتها إلى قاعدة البيانات الخاصة بتجمّع شباب الحوش. سوف يتم التّواصل معك بأقرب وقت، شكراً لوقتك');
         });
     </script>
 </body>
