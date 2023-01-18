@@ -9,6 +9,12 @@ if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.u
   window.location.replace("error.html");
 }
 
+document.body.style.position = "fixed";
+
+setTimeout(function() {
+  document.body.style.position = "static";
+}, 3300);
+
 document.getElementById("name").oninput = function() {
   this.value = this.value.replace(/[^\s,أ-ي]/gi, '');
 } 
@@ -24,9 +30,5 @@ document.getElementById("name").setAttribute("autocomplete", "off");
 
 document.getElementById("phonenb").setAttribute("autocomplete", "off");
 
-document.body.style.position = "fixed";
 
-setTimeout(function() {
-  document.body.style.position = "static";
-}, 3300);
 
