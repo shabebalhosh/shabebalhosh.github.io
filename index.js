@@ -1,13 +1,13 @@
-if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-  exit;
-} else {
-  window.location.replace("error.html");
-}
 
 
 setTimeout(function(){
   document.getElementById("splashP").style.display = "none";
 }, 5300);
+if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  exit;
+} else {
+  window.location.replace("error.html");
+}
 
 document.getElementById("name").oninput = function() {
   this.value = this.value.replace(/[^\s,أ-ي]/gi, '');
