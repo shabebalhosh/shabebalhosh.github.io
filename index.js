@@ -1,5 +1,3 @@
-
-
 setTimeout(function(){
   document.getElementById("splashP").style.display = "none";
 }, 5300);
