@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+* {
+  user-select: none;
+  user-zoom: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+.loginForm {
+  font-family: 'Lato', sans-serif;
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    padding: 20px;
+    
+}
+
+.spans {
+  text-align: center;
+}
+
+.s1 {
+  color: #14A093;
+  font-size: 38px;
+  text-shadow: 1px 1px 3px #14A093;
+}
+
+.s2 {
+  text-shadow: 1px 1px 3px #143D43;
+  color: #143D43;
+  font-size: 20px;
+}
+
+form input {
+  font-family: Vazirmatn, sans-serif;
+  width: 100%;
+  outline: none;
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 0.9rem 0.7rem;
+  box-shadow: 0px 2px 3px #14A093;
+  font-size: 17px;
+  color: #143D43;
+  text-indent: 40px;
+}
+
+form input:hover {
+  box-shadow: 0px 0px 20px #14A093;
+}
+
+form .btn {
+  outline: none;
+  display: flex;
+  justify-content: center;
+  border: none;
+  box-shadow: 0px 0px 10px #14A093;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 0.9rem 2.5rem;
+  text-align: center;
+  background-color: #14A093;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #14A093;
+  color: #143D43;
+  box-shadow: 0px 0px 20px #14A093;
+}
+
+hr {
+  color: white;
+}
+
+table {
+  font-size: 18px;
+  position: fixed;
+  text-align: center;
+  margin: 0 auto;
+  transform: translate(-50% -50%);
+  font-family: 'Vazirmatn', sans-Serif;
+}
+
+table {
+    border-bottom: 2px solid #143D43;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: white;
+}
+th, td {
+    border-bottom: 2px solid #143D43;
+    padding: 8px;
+    color: #143D43;
+}
+
+th {
+  color: #14A093;
+}

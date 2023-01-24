@@ -1,60 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=1000, user-scalable=no, height=1920" >
+  
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1000, user-scalable=no, height=1920" >
+  <title>منصة تجمّع شباب الحوش للتبرّعات</title>
+  <link rel="stylesheet" href="css/styles.css">
     
-    <title>منصة تجمّع شباب الحوش للتبرّعات</title>
-    <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
   
+  
+  
   <div id="splashP" class="splash">
     <span data-text='ShabebALHosh' class="splashTxt">ShabebALHosh</span>
-    
   </div>
   
   
   
-    <div class="main">
-            <div class="head">
-              <img oncontextmenu="return false;" src="media/logo.png" alt=""> 
-                <h1 class="title">تجمّع شباب الحوش</h1>
-                <h1 class="subtitle">استمارة التّبرّع</h1>
-            </div>
-
-            <br><br><br><br>
-
-            <div class="onForm">
-                <form action="" method="post" id="contactForm">
-                    <div class="name">
-                        <span class="nameSpan">الإسم الكريم</span>
-                        <input placeholder="الإسم باللغة العربية" required id="name" type="text" class="Input">
-                    </div>
-                    <div class="phone">
-                        <span class="phoneSpan">رقم الهاتف</span>
-                        <input placeholder="مثلاً: 81650972" required id="phonenb" type="tel" minlength="8" maxlength="8" class="Input">
-                    </div>
-                    <div class="typeOfContribution">
-                        <span class="typeOfContributionSpan">بما ستتبرّع/ين؟</span>
-                        <select required id="donationType" class="selInput">
-                            <option value="" disabled selected> </option>
-                            <option value="كتب">كتب</option>
-                            <option value="ثياب">ثياب</option>
-                            <option value="بلاستيك">بلاستيك</option>
-                            <option value="زيت مستعمل">زيت مستعمل</option>
-                            <option value="تبرّع مادي">تبرع مادي</option>
-                        </select>
-                    </div>
-                    <br><br><br><br><br>
-                    <div class="submit">
-                        <input type="submit" value="أرسل/ي المعلومات">
-                    </div>
-                    <br><br><br><br>
-                </form>
-            </div>
-    </div>
+  <div class="main">
+          <div class="head">
+            <img oncontextmenu="return false;" src="media/logo.png" alt=""> 
+              <h1 class="title">تجمّع شباب الحوش</h1>
+              <h1 class="subtitle">استمارة التّبرّع</h1>
+          </div>
+          
+          
+          <br><br><br><br>
+          
+          
+          <div class="onForm">
+              <form action="" method="post" id="contactForm">
+                  <div class="name">
+                      <span class="nameSpan">الإسم الكريم (باللغة العربية)</span>
+                      <input required id="name" type="text" class="Input">
+                  </div>
+                  
+                  
+                  
+                  <div class="phone">
+                      <span class="phoneSpan">رقم الهاتف</span>
+                      <input required id="phonenb" type="tel" minlength="8" maxlength="8" class="Input">
+                  </div>
+                  
+                  
+                  
+                  <div class="typeOfContribution">
+                      <span class="typeOfContributionSpan">بما ستتبرّع/ين؟</span>
+                      <select required id="donationType" class="selInput">
+                          <option value="" disabled selected> </option>
+                          <option value="كتب">كتب</option>
+                          <option value="ثياب">ثياب</option>
+                          <option value="بلاستيك">بلاستيك</option>
+                          <option value="زيت مستعمل">زيت مستعمل</option>
+                          <option value="تبرّع مادي">تبرع مادي</option>
+                      </select>
+                  </div>
+                  
+                  
+                  <br><br><br><br><br>
+                  
+                  
+                  <div class="submit">
+                      <input type="submit" value="أرسل/ي المعلومات">
+                  </div>
+                  
+                  
+                  <br><br><br><br>
+                  
+                  
+              </form>
+          </div>
+          
+          
+          
+          <script>
+            document.getElementById("name").oninput = function() {
+              this.value = this.value.replace(/[^\s,أ-ي]/gi, '');
+            }  
+            document.getElementById("phonenb").oninput = function() {
+              this.value = this.value.replace(/[^0-9]/gi, '');
+              if (this.value.length > 8) {
+                this.value = this.value.substring(0, 8);
+              }
+            }
+            document.getElementById("name").setAttribute("autocomplete", "off");
+            document.getElementById("phonenb").setAttribute("autocomplete", "off");
+          </script>
+          
+          
+          
+  </div>
+    
     
     
     <div class="social">
@@ -64,34 +104,25 @@
       <a oncontextmenu="return false;" target="_blank" href="https://www.facebook.com/shabeb.al.hosh/"><img src="media/facebook.png" alt="" class="fb"></a>
     </div>
     
-    <script src="index.js"></script>
     
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
-        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
-        
-        const firebaseConfig = {
-          apiKey: "AIzaSyBSOB0zMXgqb9XOzrWckFvh_OjuhkiTT5M",
-          authDomain: "contributionanddonationform.firebaseapp.com",
-          databaseURL: "https://contributionanddonationform-default-rtdb.firebaseio.com",
-          projectId: "contributionanddonationform",
-          storageBucket: "contributionanddonationform.appspot.com",
-          messagingSenderId: "965432599487",
-          appId: "1:965432599487:web:41c5c59bd1e5dc608f770a"
-        };
-        const app = initializeApp(firebaseConfig);
-        const db = getDatabase(app);
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            set(ref(db, 'donators/' + Math.random().toString(36).slice(2, 7)), {
-                name: document.getElementById('name').value,
-                phoneNB: document.getElementById('phonenb').value,
-                donationType: document.getElementById('donationType').value
-            });
-
-            document.getElementById('contactForm').reset();
-            alert('تم إرسال معلوماتك التي أدخلتها إلى قاعدة البيانات الخاصة بتجمّع شباب الحوش. سوف يتم التّواصل معك بأقرب وقت، شكراً لوقتك');
-        });
+    
+    <script type="module" src="js/firebase.js"></script>
+    <script>
+      document.body.style.position = "fixed";
+      setTimeout(function(){
+        document.getElementById("splashP").style.display = "none";
+      }, 5300);
+      setTimeout(function() {
+        document.body.style.position = "static";
+      }, 3300); 
+      if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        exit;
+      } else {
+        window.location.replace("error.html");
+      }
     </script>
+    
+    
+    
 </body>
 </html>
