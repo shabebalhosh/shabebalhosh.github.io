@@ -240,7 +240,7 @@ span:before {
 
 .social {
   position: absolute;
-  top: 92vh;
+  top: 94vh;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -259,6 +259,11 @@ span:before {
 .social a img {
   position: fixed;
   width: 13%;
+}
+
+.social a:active,
+a:focus {
+  outline: none;
 }
 
 .social .wa {
