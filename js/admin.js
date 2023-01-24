@@ -35,7 +35,7 @@ loginForm.addEventListener("submit", function(e) {
       var phoneNBCell = document.createElement("td");
       phoneNBCell.textContent = data.phoneNB;
       var donationTypeCell = document.createElement("td");
-      donationTypeCell.textContent = data.donationType;
+      donationTypeCell.textContent = data.donation;
       row.appendChild(donationTypeCell);
       row.appendChild(phoneNBCell);
       row.appendChild(nameCell);

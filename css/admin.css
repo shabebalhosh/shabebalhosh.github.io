@@ -5,10 +5,6 @@
   user-zoom: none;
 }
 
-body {
-  overflow: hidden;
-}
-
 .loginForm {
   font-family: 'Lato', sans-serif;
     z-index: 1;
@@ -81,7 +77,6 @@ hr {
 
 table {
   font-size: 18px;
-  position: fixed;
   text-align: center;
   margin: 0 auto;
   transform: translate(-50% -50%);
