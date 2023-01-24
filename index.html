@@ -16,7 +16,7 @@
   
   
   <div id="splashP" class="splash">
-    <span data-text='ShabebALHosh' class="splashTxt">ShabebALHosh</span>
+    <span data-text='ShabebALHosh' id="splashTxt" class="splashTxt">ShabebALHosh</span>
   </div>
   
   
@@ -49,8 +49,8 @@
                   
                   
                   <div class="typeOfContribution">
-                      <span class="typeOfContributionSpan">بما ستتبرّع/ين؟</span>
-                      <select multiple required id="donationType" class="selInput">
+                      <span class="typeOfContributionSpan">بما ستتبرّع/ين ؟</span>
+                      <select required id="donation" class="selInput">
                           <option value="" disabled selected> </option>
                           <option value="كتب">كتب</option>
                           <option value="ثياب">ثياب</option>
@@ -112,6 +112,7 @@
       document.body.style.position = "fixed";
       setTimeout(function(){
         document.getElementById("splashP").style.display = "none";
+        
       }, 5300);
       setTimeout(function() {
         document.body.style.position = "static";

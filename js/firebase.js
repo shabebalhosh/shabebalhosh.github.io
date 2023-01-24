@@ -13,11 +13,11 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    set(ref(db, 'donators/' + Math.random().toString(36).slice(2, 7)), {
+    set(ref(db, 'donators/' + document.getElementById('name').value), {
         name: document.getElementById('name').value,
         phoneNB: document.getElementById('phonenb').value,
-        donationType: document.getElementById('donationType').value
-    });
+        donation: document.getElementById('donation').value
+      });
     document.getElementById('contactForm').reset();
-    alert('تم إرسال معلوماتك التي أدخلتها إلى قاعدة البيانات الخاصة بتجمّع شباب الحوش. سوف يتم التّواصل معك بأقرب وقت، شكراً لوقتك');
+    alert('تم إرسال معلوماتك التي أدخلتها إلى قاعدة البيانات الخاصة بتجمّع شباب الحوش. سوف يتم التّواصل معك بأقرب وقت، شكراً لوقتك. ملاحظة : اذا اردت التبرع بشيء اخر الرجاء انتظار تواصلنا معك.');
 });
