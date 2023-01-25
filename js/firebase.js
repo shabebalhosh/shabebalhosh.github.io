@@ -16,7 +16,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     set(ref(db, 'donators/' + document.getElementById('name').value), {
         name: document.getElementById('name').value,
         phoneNB: document.getElementById('phonenb').value,
-        donation: document.getElementById('donation').value
+        donation: document.getElementById('donation').value,
+        location: document.getElementById('location').value
       });
     document.getElementById('contactForm').reset();
     alert('تم إرسال معلوماتك التي أدخلتها إلى قاعدة البيانات الخاصة بتجمّع شباب الحوش. سوف يتم التّواصل معك بأقرب وقت، شكراً لوقتك. ملاحظة : اذا اردت التبرع بشيء اخر الرجاء انتظار تواصلنا معك.');

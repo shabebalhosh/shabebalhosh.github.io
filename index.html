@@ -40,6 +40,12 @@
                   </div>
                   
                   
+                  <div class="location">
+                    <span class="locationSpan">مكان السكن(اسم المنطقة)</span>
+                    <input required id='location' type="text" class="Input">
+                  </div>
+                  
+                  
                   
                   <div class="phone">
                       <span class="phoneSpan">رقم الهاتف</span>
@@ -80,6 +86,9 @@
           
           <script>
             document.getElementById("name").oninput = function() {
+              this.value = this.value.replace(/[^\s,أ-ي]/gi, '');
+            }  
+            document.getElementById("location").oninput = function() {
               this.value = this.value.replace(/[^\s,أ-ي]/gi, '');
             }  
             document.getElementById("phonenb").oninput = function() {

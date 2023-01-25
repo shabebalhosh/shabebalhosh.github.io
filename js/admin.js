@@ -32,10 +32,13 @@ loginForm.addEventListener("submit", function(e) {
       var row = document.createElement("tr");
       var nameCell = document.createElement("td");
       nameCell.textContent = data.name;
+      var locationCell = document.createElement('td');
+      locationCell.textContent = data.location;
       var phoneNBCell = document.createElement("td");
       phoneNBCell.textContent = data.phoneNB;
       var donationTypeCell = document.createElement("td");
       donationTypeCell.textContent = data.donation;
+      row.appendChild(locationCell);
       row.appendChild(donationTypeCell);
       row.appendChild(phoneNBCell);
       row.appendChild(nameCell);
